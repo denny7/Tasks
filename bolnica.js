@@ -205,3 +205,4 @@ pirogov.anotherDay()
 pirogov.anotherDay()
 pirogov.svobodniLegla()
 pirogov.pacientiUtre()
+// single line comment
