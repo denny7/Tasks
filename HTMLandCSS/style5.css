@@ -1,0 +1,30 @@
+body {
+  margin:0 auto;
+  width: 80%;
+}
+header {
+  height: 40px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  background: blue;
+}
+header > h2 {
+  padding: 5px;
+  text-align: center;
+}
+main {
+  width: 92%;
+  margin: 0 auto;
+}
+main>section {
+  border: 1px solid green;
+  margin-bottom: 10px;
+}
+section h2 {
+  height: 25px;
+  background-color: green;
+  color : white
+}
+.lighter {
+  color : grey;
+}
