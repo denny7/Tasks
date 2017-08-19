@@ -29,17 +29,19 @@ Restaurant.prototype = {
         };
     },
     revisionCapital : function(){
-      console.log("Capital : " + this.capital);
+      console.log("Capital : " + this.capital + " lv.");
     },
     theBiggestTip : function(){
       this.waiters.sort((a,b)=> b.tips - a.tips);
-      console.log(this.waiters[0].name + " " + this.waiters[0].tips)
+      console.log("The waiter with the biggest tip is " + this.waiters[0].name + " with " + this.waiters[0].tips + " lv.")
     },
     theTips : function(){
+      console.log("Waiters & tips")
       this.waiters.sort((a,b)=> b.tips - a.tips);
-      this.waiters.forEach(x=> console.log(x.name + " " + x.tips))
+      this.waiters.forEach(x=> console.log(x.name + " with " + x.tips + " lv. tips"))
     },
     revisionMenu : function(){
+      console.log("Menu revision:")
       console.log("Meals:")
       this.menu[0].sort((a,b) => b.price - a.price);
       this.menu[0].forEach(x=> console.log(x.name + " " + x.quantity));
@@ -107,10 +109,10 @@ Client.prototype = {
         this.restaurant = restaurant
         this.waiter = restaurant.waiters[Math.floor(Math.random() * restaurant.waiters.length)];
         if (this.type != "student" && this.couldEat != meal) {
-            console.log("You can not order this food! Sorry!")
+            console.log(this.name +  " can not order this food! Sorry!")
         }
         if (this.type != "student" && this.couldDrink != drink) {
-            console.log("You can not order this drink! Sorry!")
+            console.log(this.name + " can not order this drink! Sorry!")
         }
         if (meal == this.couldEat || this.type == "student") {
             for (let index = 0; index < restaurant.menu[0].length; index++) {
@@ -120,13 +122,13 @@ Client.prototype = {
                             this.order.push(restaurant.menu[0][index]);
                             this.orderCost += restaurant.menu[0][index].price;
                             restaurant.menu[0][index].quantity -= 1;
-                            console.log(this.name + " porycha " + restaurant.menu[0][index].name);
+                            console.log(this.name + " ordered " + restaurant.menu[0][index].name);
                         } else {
                             console.log("There is not enough portions of this meal");
                         }
                         break;
                     } else {
-                        console.log("You do not have enough money for this food");
+                        console.log(this.name + " does not have enough money for this food");
                     }
                 }
             }
@@ -140,20 +142,20 @@ Client.prototype = {
                             this.orderCost += restaurant.menu[1][index].price;
                             restaurant.menu[1][index].quantity -= 1;
 
-                            console.log(this.name + "  porycha " + restaurant.menu[1][index].name);
+                            console.log(this.name + " ordered " + restaurant.menu[1][index].name + " drink.");
                         } else {
                             console.log("There is not enough portions of this meal");
                         }
                         break;
                     } else {
-                        console.log("You do not have enough money for this drink")
+                        console.log(this.name + " does not have enough money for this drink")
                     }
                 }
             }
         }
     },
     takeBill: function() {
-        console.log("The waiter " + this.waiter.name + " gives you the bill. Your bill costs " + this.orderCost + "lv.");
+        console.log("The waiter " + this.waiter.name + " gives you the bill." + this.name +  "'s bill costs " + this.orderCost + " lv.");
     },
     payBill: function() {
         var randomTip = Math.random();
@@ -165,7 +167,7 @@ Client.prototype = {
         }
         this.money -= this.orderCost;
         this.restaurant.capital += this.orderCost;
-        console.log("You pay " + this.orderCost + "lv. and give a tip " + tipCost + "lv. to " + this.waiter.name)
+        console.log(this.name + " pay " + this.orderCost + " lv. and give a tip " + tipCost + " lv. to " + this.waiter.name)
     }
 }
 
@@ -182,19 +184,19 @@ var waiter4 = new Waiter("Jack");
 var waiter5 = new Waiter("Anna-Maria");
 var denny = new Client("Denny", "student");
 var djaro = new Client("Djaro", "mutra");
-var client3 = new Client("client3")
-var client4 = new Client("client4")
-var client5 = new Client("client5")
-var client6 = new Client("client6")
-var client7 = new Client("client7")
-var client8 = new Client("client8")
-var client9 = new Client("client9")
-var client10 = new Client("client10")
-var client11 = new Client("client11")
-var client12 = new Client("client12")
-var client13 = new Client("client13")
-var client14 = new Client("client14")
-var client15 = new Client("client15");
+var client3 = new Client("Galin")
+var client4 = new Client("Inna")
+var client5 = new Client("Svetla")
+var client6 = new Client("Doni")
+var client7 = new Client("Angel")
+var client8 = new Client("Niki")
+var client9 = new Client("Metin")
+var client10 = new Client("Ivan")
+var client11 = new Client("Joro")
+var client12 = new Client("Simona")
+var client13 = new Client("Aneliya")
+var client14 = new Client("Miroslav")
+var client15 = new Client("Martin");
 for (let index = 0; index < priPesho.clients.length; index++) {
     var randomType = Math.random();
     if (randomType <= 0.2) {
@@ -216,6 +218,6 @@ for (let index = 0; index < priPesho.clients.length; index++) {
 };
 priPesho.startWork();
 priPesho.theTips();
+priPesho.theBiggestTip()
 priPesho.revisionMenu();
 priPesho.revisionCapital()
-console.log(salad.weight)
