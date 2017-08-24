@@ -1,0 +1,111 @@
+body {
+    margin: 0 auto;
+}
+
+.container {
+    background-image: url("../Image/wood.jpg");
+    background-size: cover;
+}
+
+header>.upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>.upper>img {
+    width: 100px;
+    height: 150px;
+}
+
+header>.upper>h1 {
+    margin-left: 1em;
+    color: #5C1800
+}
+
+nav .container-fluid {
+    background-color: #481706
+}
+
+main>.row>.aside {
+    height: auto;
+}
+
+main>.row>.main {
+    height: auto;
+}
+
+main img {
+    width: 150px;
+}
+
+main .main>article {
+    border: 2px solid #5C1800;
+    border-radius: 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+main .main>article>img {
+    float: left;
+    margin: 10px 0px 10px 30px
+}
+
+main .main>article>.right {
+    float: right;
+    margin-right: 25px;
+}
+
+main .main>article>.info {
+    clear: both;
+    display: block;
+    margin: 0px 10px;
+    color: #2D0B00;
+}
+
+main .main>article>.right>h1 {
+    color: #5C1800;
+}
+
+main .main>article>.right>h3 {
+    color: #110400;
+}
+
+footer {
+    margin: 0px -15px;
+    ;
+    display: block;
+    background: #5C1800;
+    font-size: 1.5em;
+    color: white;
+    height: 50px;
+}
+
+footer>.left {
+    margin-top: 10px;
+    margin-left: 15px;
+    float: left;
+}
+
+footer>.right {
+    margin-top: 10px;
+    margin-right: 15px;
+    float: right;
+}
+
+main form>p {
+    margin-left: 4em;
+    font-size: 2em;
+}
+
+main form>.first, .second {
+    margin-left: 4em;
+}
+
+.first {
+    font-size: 2em;
+}
+
+.second {
+    font-size: 2em;
+}
