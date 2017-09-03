@@ -1,0 +1,14 @@
+<script>
+var ask = prompt("Enter word");
+count = ask.length - 1;
+var palindrom = true;
+for(var index = 0; index < ask.length / 2; index++){
+  if(ask.charAt(index) == ask.charAt(count)){
+    palindrom = true;
+  } else {
+    palindrom = false;
+  }
+  count--;
+}
+palindrom = palindrom != true ? console.log("Dumata ne e palindrom") : console.log("Dumata e palindrom");
+</script>

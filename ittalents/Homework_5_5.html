@@ -1,0 +1,21 @@
+<script>
+    var first = prompt("Enter first word");
+    var second = prompt("Enter second word");
+    var istina = false;
+    for (var index = 0; index < first.length; index++) {
+        if (first.charAt(index) == second.charAt(0)) {
+            istina = true;
+        }
+    }
+    if (istina) {
+        for (var index = 0; index < first.length; index++) {
+            if (first.charAt(index) == second.charAt(0)) {
+                console.log(second);
+            } else {
+                console.log(first.charAt(index));
+            }
+        }
+    } else {
+        console.log("Redicite nqmat obshto simvol");
+    }
+</script>

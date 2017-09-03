@@ -1,0 +1,30 @@
+<script>
+var daljina = 0;
+    do {
+        var first = prompt("Enter first word");
+    }
+    while (first.indexOf(" ") != -1);
+    do {
+        var second = prompt("Enter second word");
+    }
+
+    while (second.indexOf(" ") != -1);
+    if (first.length == second.length) {
+        console.log("Redicite sa s ravna daljina");
+        daljina = first.length;
+    }
+    if (first.length > second.length) {
+        console.log("Parvata redica e s po-golqma daljina");
+        daljina = first.length;
+    }
+    if (first.length < second.length) {
+        console.log("Vtorata redica e s po-golqma daljina");
+        daljina = second.length;
+    }
+    for(var index = 0; index < daljina; index++){
+      if(first.charAt(index) != second.charAt(index)){
+        console.log(index + 1 + first.charAt(index) + "-" + second.charAt(index));
+      }
+
+    }
+</script>

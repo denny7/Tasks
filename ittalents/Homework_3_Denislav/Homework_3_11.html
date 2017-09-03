@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var masiv = [];
+  var delqtSeNaPet = "";
+  var count = 0;
+  for(var index = 0; index < 7; index++){
+    masiv[index] = prompt("Vavedi chislo")
+  }
+  for(var ind = 0; ind < masiv.length; ind++){
+    if(masiv[ind] % 5 == 0 && masiv[ind] > 5){
+      delqtSeNaPet += masiv[ind] + " ";
+      count++;
+    }
+  }
+  console.log(delqtSeNaPet + "." +  count + " broq");
+  </script>
+
+</body>
+</html>

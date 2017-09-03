@@ -1,0 +1,29 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  height : 10px;
+  background-color: blue;
+}
+footer {
+  height : 10px;
+  background-color: blue;
+}
+main {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.left{
+  height: 200px;
+  width: 29%;
+  background: red;
+  margin-right: 1%
+}
+.right{
+  height: 200px;
+  width: 70%;
+  background: green;
+}

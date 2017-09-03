@@ -1,0 +1,12 @@
+var arr = [1,2,3,4,5,6,7];
+console.log(arr);
+var nulevIndex = arr[0];
+arr[0] = arr[1];
+arr[1] = nulevIndex;
+var indexTri = arr[2];
+arr[2] = arr[2] + arr[3] - arr[2];
+arr[3] = indexTri;
+var indexPet = arr[4];
+arr[4] = arr[4] * arr[5] / arr[4];
+arr[5] = indexPet;
+console.log(arr);

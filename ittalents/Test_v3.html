@@ -1,0 +1,32 @@
+<script>
+var arr = ["2","3","4","5","6","7","8","9","T","J","Q","K","A"];
+var card1 = false;
+var card2 = false;
+var card3 = false;
+var result = false;
+while(result == false){
+var ask = prompt("Izberete 3 karti");
+  ask = ask.split(" ");
+  var cardOne = ask[0];
+  var cardTwo = ask[1];
+  var cardThree = ask[2];
+  for(var index = 0; index < arr.length; index++){
+    if(ask[0] == arr[index]){
+      card1 = true;
+    }
+    if(ask[1] == arr[index]){
+      card2 = true;
+    }
+    if(ask[2] == arr[index]){
+      card3 = true;
+    }
+  }
+    if(card1 == true && card2 == true && card3 == true){
+      if(arr.indexOf(cardOne) < arr.indexOf(cardTwo) && arr.indexOf(cardTwo) < arr.indexOf(cardThree)){
+        result = true;
+      }
+    } else {
+      console.log("Invalid cards input");
+    }
+  }
+</script>

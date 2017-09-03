@@ -1,0 +1,31 @@
+<script>
+var count = 0;
+var countAll = 0;
+var arr = ["T", "J", "Q", "K", "A"];
+var istina = false;
+var istinaSec = false;
+    while (count < 3) {
+      var str = prompt("Give me two cards between 2-9 or T-A separated with space");
+        var cardOne = str.charAt(0);
+        var cardTwo = str.charAt(2);
+        for (var index = 0; index < arr.length; index++) {
+            if ((cardOne >= 2 && cardOne <= 9) || cardOne == arr[index]){
+              istina = true;
+            }
+            if(((cardTwo >= 2 && cardTwo <= 9) || cardTwo == arr[index])){
+              istinaSec = true;
+            }
+          }
+          if(istina == false || istinaSec == false){
+            console.log("Enter value");
+          }
+          if((cardOne == "A" && cardTwo == "K") || (cardOne == "K" && cardTwo == "A")){
+            count++
+          } else {
+            count = 0
+          }
+
+            countAll++;
+      }
+      console.log("COUNT ALL " + countAll);
+</script>

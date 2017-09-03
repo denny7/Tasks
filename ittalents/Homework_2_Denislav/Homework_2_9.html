@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 9</title>
+</head>
+<body>
+<script>
+var a = Number(prompt('Molq izberete parvo chislo'));
+while(isNaN(a)){
+  var a = Number(prompt('Molq izberete parvo chislo!!!'));
+}
+var b = Number(prompt('Molq izberete vtoro chislo'));
+while(isNaN(b)){
+  var b = Number(prompt('Molq izberete vtoro chislo!!!'));
+}
+var chisla = "";
+var suma = 0;
+var skip = 0;
+var n;
+var m;
+if (a < b) {
+  n=a;
+  m=b;
+} else {
+  n=b;
+  m=a;
+}
+for (var i = n; i <= m; i++) {
+  if(Math.floor(Math.sqrt(i)) - Math.sqrt(i) == 0){
+    chisla += i + ", ";
+    suma += i;
+    if(i % 3 === 0){
+      chisla = chisla.replace(i,"skip " + Math.sqrt(i));
+      suma -= i;
+    }
+   if(suma > 200){
+    break;
+   }
+  }
+}
+chisla = chisla.replace(/,\s*$/, "");
+alert(chisla);
+</script>
+</body>
+</html>

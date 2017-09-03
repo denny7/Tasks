@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 5</title>
+</head>
+<body>
+  <script>
+  var parvoChislo = Number(prompt('Vavedete parvoto chislo'));
+  while(isNaN(parvoChislo)){
+    parvoChislo = Number(prompt('Molq vavedete chislo!!!'));
+  }
+  var vtoroChislo = Number(prompt('Vavedete vtororo chislo'));
+  while(isNaN(vtoroChislo)){
+    vtoroChislo = Number(prompt('Molq vavedete chislo!!!'));
+  }
+  if(parvoChislo > vtoroChislo){
+    for(var j = vtoroChislo; j <= parvoChislo; j++){
+      console.log(j);
+        }
+        }else {
+          for(var i = parvoChislo; i <= vtoroChislo; i++){
+            console.log(i);
+          }
+      }
+
+  </script>
+
+</body>
+</html>

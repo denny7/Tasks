@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 7</title>
+</head>
+<body>
+  <script>
+  var n = Number(prompt('Molq izberete chislo!'));
+  while(isNaN(n)){
+    var n = Number(prompt('Molq izberete CHISLO!!!'));
+  }
+  var row = "";
+  for(var i = 3; i <= n * 3; i += 3){
+  row += i + ", ";
+  }
+  row = row.replace(/,\s*$/, "");
+  alert(row);
+  </script>
+
+</body>
+</html>

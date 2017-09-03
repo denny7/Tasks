@@ -1,0 +1,19 @@
+<script>
+    var first = "";
+    var second = "";
+    var fiveFirst = "";
+    var fiveSecond = "";
+    do {
+        first = prompt("Enter word with 10 to 20 words");
+    }
+    while ((first.length < 10) || (first.length > 20));
+    do {
+        second = prompt("Enter word with 10 to 20 words");
+    }
+    while ((second.length < 10) || (second.length > 20));
+    fiveFirst = first.substr(0, 5);
+    fiveSecond = second.substr(0, 5);
+    first = first.replace(first.slice(0, 4), fiveSecond);
+    second = second.replace(second.slice(0, 4), fiveFirst)
+    var result = first.length > second.length ? console.log(first.length + " " + first) : console.log(second.length + " " + second);
+</script>

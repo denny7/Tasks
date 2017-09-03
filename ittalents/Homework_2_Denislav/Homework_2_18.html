@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 18</title>
+</head>
+
+<body>
+    <script>
+        var parvoChislo = Number(prompt('Vavedete parvoto chislo ot 1 do 9'));
+        while (isNaN(parvoChislo) || parvoChislo < 1 || parvoChislo > 9) {
+            parvoChislo = Number(prompt('Molq vavedete parvo chislo ot 1 do 9!!!'));
+        }
+        var vtoroChislo = Number(prompt('Vavedete vtororo chislo ot 1 do 9'));
+        while (isNaN(vtoroChislo) || vtoroChislo < 1 || vtoroChislo > 9) {
+            vtoroChislo = Number(prompt('Molq vavedete vtoro chislo ot 1 do 9!!!'));
+        }
+        var n = 0;
+        var m = 0;
+        if (parvoChislo > vtoroChislo) {
+            m = parvoChislo;
+            n = vtoroChislo;
+        } else {
+            m = vtoroChislo;
+            n = parvoChislo;
+        }
+        var a = "";
+        for (var i = 1; i <= n; i++) {
+            for(var j = 1; j <= m; j++){
+              a += i.toString() + "*"+ j +"=" + i * j + "\n";
+            }
+        }
+        console.log(a);
+    </script>
+</body>
+
+</html>

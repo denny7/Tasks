@@ -1,0 +1,13 @@
+<script>
+var ask = prompt("Enter a sentence");
+var result = ask.charAt(0).toUpperCase();
+for(var index = 1; index < ask.length; index++){
+
+  if(ask.charAt(index - 1)== " "){
+    result += ask.charAt(index).toUpperCase();
+  } else {
+    result += ask.charAt(index)
+  }
+}
+console.log(result);
+</script>

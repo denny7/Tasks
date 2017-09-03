@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 13</title>
+</head>
+<body>
+  <script>
+  var number = Number(prompt("Vavedete chislo mejdu 2 i 27"));
+  while(isNaN(number) || (number > 27 || number < 2)){
+    var number = Number(prompt("Vavedete chislo mejdu 2 i 27"));
+  }
+  var m = "";
+for (var i = 100; i<1000; i++){
+  i = i.toString();
+  if(Number(i.charAt(0)) + Number(i.charAt(1)) + Number(i.charAt(2)) == number){
+    m += i + ' ';
+  }
+}
+  console.log(m);
+  </script>
+</body>
+</html>

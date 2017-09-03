@@ -1,0 +1,16 @@
+<script>
+var ask = "";
+var count = 0;
+var countAll = 0;
+do{
+  ask = prompt("Heads or Tails");
+  if(ask == "Heads"){
+    count++
+  } else {
+    count = 0;
+  }
+  countAll++;
+}
+while(count < 5);
+console.log(countAll);
+</script>

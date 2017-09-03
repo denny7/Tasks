@@ -1,0 +1,34 @@
+main {
+  width: 500px;
+  background-color: purple;
+  margin-bottom: 10px;
+  float: left;
+}
+
+#mainfieldset {
+  padding: 15px 20px;
+  border: 2px solid yellow;
+}
+.quest {
+  font-size: 22px;
+  color : yellow;
+  font-style: underline;
+}
+.otherfieldset {
+  padding-bottom: 10px;
+  border: 1px solid pink;
+}
+.legend {
+  color: pink;
+}
+.submitbutton{
+  padding: 3px;
+  margin: 5px;
+}
+.imgbtn {
+  width: 100px;
+}
+input {
+
+  margin-left: 5px;
+}

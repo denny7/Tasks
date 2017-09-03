@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Form</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <fieldset id="mainfieldset">
+            <form>
+                <legend> <span class="quest"> Quest</span> </legend>
+                <fieldset class="otherfieldset">
+                    <legend> <span class="legend"> Personal information </span></legend <form method="GET">
+                    <div>
+                        <label for="firstname">What is your firstname?</label>
+                        <input type="text" id="firstname" name="fname"></input>
+                    </div>
+                    <div>
+                        <label for="lastname">What is your lastname?</label>
+                        <input type="text" id="lastname" name = "lname"onclick="lastName()"></input>
+                    </div>
+                    <div>
+                        <label for="age">How old are you?</label>
+                        <input type="number" name="godini" min="16" id="age"></input>
+                    </div>
+                    <div>
+                        <label for="place">Where are you form?</label>
+                        <input type="text" id="place" name="wherefrom"></input>
+                    </div>
+                    <div>
+                        <label for="gender1">What is your gender?</label>
+                        <input type="radio" name="gender" value="male" onclick="changeFormBgRed()">male</input>
+                        <input type="radio" name="gender" value="female" onclick="changeFormBgBlue()">female</input>
+                        <input type="radio" name="gender" value="other" onclick="changeFormBgYellow()">other</input>
+                    </div>
+                </fieldset>
+                <fieldset class="otherfieldset">
+                    <legend> <span class="legend">Your skills </span></legend>
+                    <div>
+                        <label for="lng">What programming languages do you know?</label>
+                        <input type="checkbox" name="lng" value="1"> JavaScript </input>
+                        <input type="checkbox" name="lng" value="2"> Java </input>
+                        <input type="checkbox" name="lng" value="3"> C# </input>
+                        <input type="checkbox" name="lng" value="4"> Perl </input>
+                        <input type="checkbox" name="lng" value="5"> HTML </input>
+                        <input type="checkbox" name="lng" value="6"> CSS </input>
+                    </div>
+                    <div>
+                        <label for="work">Are working at the moment?</label>
+                        <input type="radio" name="work:" value="no" onclick="showSad()"> No </input>
+                        <input type="radio" name="work:" value="yes" onclick="showSmile()"> Yes </input>
+                    </div>
+                    <div>
+                        <label for="fvlng">What is your favourite programming language?</label>
+                        <select name="fvlng">
+              <option value="java">Java</option>
+              <option value="javascript" selected>Javascript</option>
+              <option value="perl">Perl</option>
+              <option value="csharp">C#</option>
+            </div>
+            </select>
+                </fieldset>
+                <input type="submit" class="submitbutton">
+                <label for="changefont"></label>
+                <input type="range" min="1" max="10" id="changefont" onchange="blurBg()">
+            </form>
+        </fieldset>
+    </main>
+    <aside>
+        <audio id="kilata">
+          <source  src="100 Kila - Di Boss [Official HD Video]-[www_flvto_com].mp3">
+        </audio>
+        <img class="imgbtn" src="google-play-music.png" alt="play music" onclick="playMusic()" />
+    </aside>
+    <aside>
+      <input type="number" name="" id="">
+    </aside>
+    <script src="form.js">
+    </script>
+</body>
+
+</html>

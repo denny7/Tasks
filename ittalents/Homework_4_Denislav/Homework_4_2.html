@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 2</title>
+</head>
+<body>
+  <script>
+var masiv = new Array(4);
+var diagonalEdno =[];
+var diagonalDve = [];
+
+for(var row = 0; row < masiv.length; row++){
+  masiv[row] = [];
+  for(var col = 0; col < masiv.length; col++){
+    masiv[row][col] = prompt("Izberete chislo!");
+  }
+
+  console.log()
+}
+for(var row = 0,index = masiv.length - 1; index >= 0, row < masiv.length; row++, index--){
+  diagonalEdno.push(masiv[row][row]);
+  diagonalDve.push(masiv[row][index]);
+}
+console.log(masiv);
+console.log(diagonalEdno);
+console.log(diagonalDve);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  margin : 0 auto;
+  width: 80%
+}
+header {
+  height: 20px;
+  background: blue;
+}
+footer {
+  height: 20px;
+  background: blue;
+}
+main {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: center;
+}
+.left, .right {
+  background: yellow;
+  flex : 1 auto;
+  height: 250px;
+}
+.middle {
+  background: green;
+  flex: 2 auto;
+  height: 250px;
+  margin: 0 10px;
+
+}

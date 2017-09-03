@@ -1,0 +1,13 @@
+<script>
+    var ask = prompt("Enter a sentence");
+    console.log(ask);
+    ask = ask.split(" ");
+    var words = ask.length;
+    var sum = 0;
+    for (var index = 0; index < ask.length; index++) {
+        if (sum < ask[index].length) {
+            sum = ask[index].length
+        }
+    }
+    console.log("Broi dumi " + words + ". Nai-dalgata e " + sum);
+</script>

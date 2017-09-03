@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 9</title>
+</head>
+<body>
+  <script>
+  var masiv = [];
+  for(var index = 0; index < 5; index++){
+    masiv.push(prompt("Izberete chislo!"));
+  }
+  console.log(masiv);
+for(var ind = masiv.length - 1; ind >= 0; ind--){
+  masiv.push(masiv[ind]);
+  masiv.splice(ind, 1);
+}
+  console.log(masiv);
+  </script>
+</body>
+</html>

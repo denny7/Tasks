@@ -1,0 +1,50 @@
+<script>
+    var n = 10;
+    var field = new Array(n);
+    for (var row = 0; row < field.length; row++) {
+        field[row] = new Array(n);
+        for (var col = 0; col < field[row].length; col++) {
+            field[row][col] = " ";
+        }
+    }
+    var numberRow;
+    var numberCol;
+    for (var count = 1; count <= 10; count++) {
+        do {
+            numberRow = Number(prompt("Enter row"));
+            numberCol = Number(prompt("Enter col"));
+        }
+        while (numberRow < 0 || numberRow >= n || numberCol < 0 && numberCol >= n);
+        field[numberRow][numberCol] = "*";
+    }
+    var red = "";
+    countMines = "";
+    for (var row = 0; row < field.length; row++) {
+        for (var col = 0; col < field[row].length; col++) {
+            if (field[row][col] != "*") {
+                for (var r = row - 1; r <= row + 1; r++) {
+                    if (r >= 0 && r < field.length) {
+                        for (var c = col - 1; c <= col + 1; c++) {
+                            if (c >= 0 && c < field[row].length) {
+                                if (field[r][c] == "*") {
+                                    countMines++;
+                                }
+                            }
+                        }
+                    }
+                }
+                        field[row][col] = countMines;
+                        countMines = " ";
+            }
+        }
+    }
+
+    for (var row = 0; row < field.length; row++) {
+        for (var col = 0; col < field[row].length; col++) {
+            red += field[row][col] + " ";
+        }
+        console.log(red);
+        red = "";
+        console.log();
+    }
+</script>
