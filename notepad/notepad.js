@@ -89,37 +89,48 @@ SecuredNotepad.prototype.constructor = SecuredNotepad;
 SecuredNotepad.prototype.addTextToPage = function(number, text, password) {
     if (password == this.password) {
         SimpleNotepad.prototype.addTextToPage.call(this, number, text);
+    } else {
+      console.log("Invalid password");
     }
 }
 SecuredNotepad.prototype.changeTextToPage = function(number, text, password) {
     if (password == this.password) {
         SimpleNotepad.prototype.changeTextToPage.call(this, number, text);
+    } else {
+      console.log("Invalid password");
     }
 }
 SecuredNotepad.prototype.deleteTextOnPage = function(number, password) {
     if (password == this.password) {
         SimpleNotepad.prototype.deleteTextOnPage.call(this, number);
+    } else {
+      console.log("Invalid password");
     }
 }
 SecuredNotepad.prototype.showAllPagesInfo = function(password) {
     if (password == this.password) {
         SimpleNotepad.prototype.showAllPagesInfo.call(this);
+    } else {
+      console.log("Invalid password");
     }
 }
 SecuredNotepad.prototype.searchWordInPage = function(word,number, password) {
     if (password == this.password) {
         SimpleNotepad.prototype.searchWordInPage.call(this, word,number, password);
+    } else {
+      console.log("Invalid password");
     }
 }
 SecuredNotepad.prototype.printAllPagesWithDigits = function(password) {
     if (password == this.password) {
         SimpleNotepad.prototype.printAllPagesWithDigits.call(this);
+    } else {
+      console.log("Invalid password");
     }
 };
 
 function ElectronicDevice() {
     this.pusnatoLiEUstroistvoto = false;
-
     this.start = function() {
         if (!this.pusnatoLiEUstroistvoto) {
             this.pusnatoLiEUstroistvoto = true;
@@ -146,32 +157,44 @@ ElectronicSecuredNotepad.prototype.constructor = ElectronicSecuredNotepad;
 ElectronicSecuredNotepad.prototype.addTextToPage = function(number, text, password) {
     if (this.pusnatoLiEUstroistvoto) {
         SecuredNotepad.prototype.addTextToPage.call(this, number, text, password)
+    } else {
+      console.log("Ustroistvoto ne e vklucheno")
     }
 }
 
 ElectronicSecuredNotepad.prototype.changeTextToPage = function(number, text, password) {
     if (this.pusnatoLiEUstroistvoto) {
         SecuredNotepad.prototype.changeTextToPage.call(this, number, text, password)
+    } else {
+      console.log("Ustroistvoto ne e vklucheno")
     }
 }
 ElectronicSecuredNotepad.prototype.deleteTextOnPage = function(number, password) {
     if (this.pusnatoLiEUstroistvoto) {
         SecuredNotepad.prototype.deleteTextOnPage.call(this, number, password)
+    } else {
+      console.log("Ustroistvoto ne e vklucheno")
     }
 }
 ElectronicSecuredNotepad.prototype.showAllPagesInfo = function(password) {
     if (this.pusnatoLiEUstroistvoto) {
         SecuredNotepad.prototype.showAllPagesInfo.call(this, password)
+    } else {
+      console.log("Ustroistvoto ne e vklucheno")
     }
 }
 ElectronicSecuredNotepad.prototype.searchWordInPage = function(word,number,password) {
     if (this.pusnatoLiEUstroistvoto) {
         SecuredNotepad.prototype.searchWordInPage.call(this, word, number, password)
+    } else {
+      console.log("Ustroistvoto ne e vklucheno")
     }
 }
 ElectronicSecuredNotepad.prototype.printAllPagesWithDigits = function(password) {
     if (this.pusnatoLiEUstroistvoto) {
         SecuredNotepad.prototype.printAllPagesWithDigits.call(this, password)
+    } else {
+      console.log("Ustroistvoto ne e vklucheno")
     }
 }
 var simple = new SimpleNotepad(15);
@@ -186,7 +209,6 @@ electronicSecuredNotepad.deleteTextOnPage(4, "Denny7");
 electronicSecuredNotepad.searchWordInPage("text",0,"Denny7")
 electronicSecuredNotepad.deleteTextOnPage(0,"Denny7")
 electronicSecuredNotepad.showAllPagesInfo("Denny7");
-
 
 // console.log(electronicSecuredNotepad.pages)
 // console.log(electronicSecuredNotepad.pusnatoLiEUstroistvoto)
